@@ -1,4 +1,4 @@
-# JR_University_Homework
+# GDUF_Homework
 
 构建贷款计算器
 > 文件夹命名方式：组别_姓名
