@@ -18,7 +18,7 @@ public class CalcInFineOneTest {
                 .setRemainingBalance(10000)
                 .setNumberPayment(12)
                 .setNumberPaymentType(0)
-                .setRate(0.12)
+                .setRate(12)
                 .setRateType(0));
         List<PaymentSchedule> scheduleList = paymentCalculator.advance(new Date());
 

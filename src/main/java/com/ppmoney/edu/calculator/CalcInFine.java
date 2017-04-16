@@ -23,13 +23,13 @@ public class CalcInFine extends PaymentCalculator {
         double interest;
 
         if (Constant.DAILY == paymentCondition.getNumberPaymentType() && Constant.DAILYRATE == paymentCondition.getRateType()) {
-            interest = paymentCondition.getRemainingBalance() * paymentCondition.getRate() * paymentCondition.getNumberPayment();
+            interest = paymentCondition.getRemainingBalance() * (paymentCondition.getRate() / 100) * paymentCondition.getNumberPayment();
         } else if (Constant.DAILY == paymentCondition.getNumberPaymentType() && Constant.ANNUALRATE == paymentCondition.getRateType()) {
-            interest = paymentCondition.getRemainingBalance() * paymentCondition.getRate() * paymentCondition.getNumberPayment() / 360;
+            interest = paymentCondition.getRemainingBalance() * (paymentCondition.getRate() / 100) * paymentCondition.getNumberPayment() / 360;
         } else if (Constant.MONTHLY == paymentCondition.getNumberPaymentType() && Constant.DAILYRATE == paymentCondition.getRateType()) {
-            interest = paymentCondition.getRemainingBalance() * paymentCondition.getRate() * paymentCondition.getNumberPayment() * 30;
+            interest = paymentCondition.getRemainingBalance() * (paymentCondition.getRate() / 100) * paymentCondition.getNumberPayment() * 30;
         } else {
-            interest = paymentCondition.getRemainingBalance() * paymentCondition.getRate();
+            interest = paymentCondition.getRemainingBalance() * (paymentCondition.getRate() / 100);
         }
 
         DateTime dateTime = new DateTime(fromDate);

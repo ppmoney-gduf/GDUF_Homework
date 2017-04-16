@@ -1,0 +1,34 @@
+<div class="page-sidebar" id="sidebar"><!-- 左侧菜单页面:这个注释不能移到上面,angular会解析报错 -->
+    <!-- Page Sidebar Header-->
+    <div class="sidebar-header-wrapper">
+        <input type="text" class="searchinput" />
+        <i class="searchicon fa fa-search"></i>
+        <div class="searchhelper">Search Data</div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <ul class="nav sidebar-menu">
+        <li ng-repeat = "item in menuData">
+            <!-- 有二级菜单 -->
+            <a href="#" class="menu-dropdown" ng-show="item.children && item.children.length > 0">
+                <i class="menu-icon {{item.icon}}"></i>
+                <span class="menu-text">{{item.text}}</span>
+                <i class="menu-expand"></i>
+            </a>
+
+            <ul class="submenu" ng-show ="item.children && item.children.length > 0">
+                <li ng-repeat = "sub in item.children">
+                    <a href="{{sub.url}}" ng-click="setCurrentMenu(item, sub)">
+                        <span class="menu-text">{{sub.text}}</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- 没有二级菜单 -->
+            <a href="{{item.url}}" ng-show="!item.children || item.children.length == 0" ng-click="setCurrentMenu(item, sub)">
+                <i class="menu-icon {{item.icon}}"></i>
+                <span class="menu-text"> {{item.text}} </span>
+            </a>
+        </li>    
+    </ul>
+</div>
