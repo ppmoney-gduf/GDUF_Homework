@@ -31,8 +31,8 @@ public class CalcInFineController {
             try {
                 PaymentCondition paymentCondition = objectMapper.readValue(paramsJson, PaymentCondition.class);
 
-                CalcInFineOne calcInFineOne = new CalcInFineOne(paymentCondition);
-                List<PaymentSchedule> scheduleList = calcInFineOne.advance(new Date());
+                PaymentCalculator calcInFine = new CalcInFine(paymentCondition);
+                List<PaymentSchedule> scheduleList = calcInFine.advance(new Date());
 
                 return objectMapper.writeValueAsString(scheduleList);
             } catch (IOException e) {

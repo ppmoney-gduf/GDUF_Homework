@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CalcInFineOneTest {
     @Test
     public void advance() throws Exception {
-        CalcInFineOne paymentCalculator = new CalcInFineOne(PaymentCondition.newBuilder()
+        PaymentCalculator paymentCalculator = new CalcInFine(PaymentCondition.newBuilder()
                 .setRemainingBalance(10000)
                 .setNumberPayment(12)
                 .setNumberPaymentType(0)
