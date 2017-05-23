@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>主界面</title>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>
+
+<script type="text/javascript"  src="JavaScript/main.js"  charset="utf-8"></script>
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="onLoad()" window.screen.height=1024 window.screen.width=1280>
+
+<div class="page_frame">
+  <div class="top_frame"><!--<img src="picture/top.jpg" style="width:1024px;height:120px"/>--></div>
+  <div class="menu_frame">
+  <div class="menu_frame2">网贷计算器</div></div>
+  <div class="content_frame">
+	<div class="content_left">
+     <div class="left_mag">
+     <form id="form" name="form" action="">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="26%" height="50" align="right" valign="middle">借出日期：</td>
+              <td width="74%" align="left" valign="middle">
+              <input type="date" id="date1" class=" text_sty"/></td>
+            </tr>
+            <tr>
+              <td  width="26%" height="50" align="right" valign="middle">借出金额：</td>
+              <td width="74%"  align="left" valign="middle">
+              <input id="capital"  class=" text_sty" type="number" min=0 max=999999999999 value="0"/></td>
+            </tr>
+            <tr>
+              <td width="26%" height="50" align="right" valign="middle">借出期限：</td>
+              <td width="74%" align="left" valign="middle">
+              <input id="deadline"  class=" text_sty" type="number" min=0 max=999999999999 value="1"/></td>
+            </tr>
+            <tr>
+              <td width="26%" height="30" align="right" valign="middle">&nbsp;</td>
+              <td width="74%" align="left" valign="middle">
+                  <label>
+                    <input type="radio" name="RadioGroup1" value="0" checked="checked"/>
+                    月</label>
+                  <label>
+                    <input type="radio" name="RadioGroup1" value="1" />
+                    日</label>
+                  <br /></td>
+            </tr>
+            <tr>
+              <td width="26%" height="50" align="right" valign="middle">利率：</td>
+              <td width="74%" align="left" valign="middle">
+              <input id="rate"  class=" text_sty" type="text" value="0"              />%</td>
+            </tr>
+            <tr>
+              <td width="26%" height="30" align="right" valign="middle">&nbsp;</td>
+              <td width="74%" align="left" valign="middle">
+                  <label>
+                    <input type="radio" name="RadioGroup2" value="0" checked="checked"/>
+                    年利率</label>
+                  <label>
+                    <input type="radio" name="RadioGroup2" value="1" />
+                    日利率</label>
+                  <br /></td>
+            </tr>
+            <tr>
+              <td width="26%" height="50" align="right" valign="middle">还款方式：</td>
+              <td width="74%" align="left" valign="middle">
+              <select class=" sel_opt" id="selection">
+                <option value="0">月还息到期还本</option>
+                <option value="1" selected="selected">到期还本息</option>
+                <option value="2">按日算息，每月付息，到期还本</option>
+                <!--<option value="3">按月还本息（等额本息）</option>-->
+                <!--<option value="4">月还息按季还本</option>-->
+                <option value="5">标满付息，到期还本</option>
+                <!--<option value="6">等本等息</option>-->
+                <!--<option value="7">等额本金</option>-->
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <td height="50" align="right" valign="middle">&nbsp;</td>
+              <td align="left" valign="middle">
+              <input type="button" value="     计算     " onClick="calculation()"/>
+              
+              <input type="reset" value="      重置     "/></td>
+            </tr>
+          </table>
+          
+        </form>
+     </div>
+	</div>
+	<div class="content_right">
+    <div style="OVERFLOW: auto; WIDTH: 100%; HEIGHT: 440px"> 
+     <table id="tables"  class ="table_sty" >
+			
+         <tr>
+         <td class="table_sty1">期号</td>
+         <td class="table_sty1">代收(含本金)</td>
+         <td class="table_sty1">本金</td>
+         <td class="table_sty1">利息</td>
+         <td class="table_sty1">借出日期</td>
+         <td class="table_sty1">还款日期</td>
+         
+        </tr>
+</table></div>
+        </div>
+  </div>
+  <div class="bottom_frame"> <div align="right">系统当前时间：<div id="date"></div></div>  </div>
+</div>
+</body>
+</html>
