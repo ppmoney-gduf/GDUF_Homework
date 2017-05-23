@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+<
+style type ="text /css">html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	background-attachment: fixed;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg',
+		sizingMethod='scale');
+	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg',
+		sizingMethod='scale');
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+#NameBlock {
+	margin: 5px 0px 0px 0px;
+	text-align: center;
+	background-color: #FFF;
+	opacity: 0.5;
+}
+
+#Name {
+	font-family: "华文楷体";
+	color: #cc2b2b;
+	font-weight: bold;
+	font-size: 45px;
+}
+
+#frame1 {
+	width: 350px;
+	height: 420px;
+	margin-left: 10%;
+	margin-top: 5%;
+	background-color: #FFF;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	opacity: 0.7;
+}
+
+#frame2 {
+	width: 550px;
+	height: 420px;
+	margin-right: 5%;
+	margin-top: 5%;
+	background-color: #FFF;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	opacity: 0.7;
+}
+
+input[type="text"], input[type="number"], input[type="submit"], select {
+	font-family: "华文楷体";
+	font-weight: bold;
+	font-size: 20px;
+	width: 220px;
+	height: 40px;
+	margin-top: 10px;
+	border-style: ridge;
+}
+
+input[type="text"], input[type="number"], input[type="submit"], select {
+	font-family: "华文楷体";
+	font-weight: bold;
+	font-size: 20px;
+	width: 220px;
+	height: 40px;
+	margin-top: 10px;
+	border-style: ridge;
+}
+
+#calculate {
+	width: 90%;
+	height: 40px;
+	background-color: #cc2b2b;
+	border-style: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-family: "华文楷体";
+	font-weight: bold;
+	font-size: 20px;
+}
+
+font {
+	font-family: "华文楷体";
+	font-weight: bold;
+	font-size: 20px;
+}
+</
+style
+>
